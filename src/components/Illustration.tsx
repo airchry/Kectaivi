@@ -2,8 +2,13 @@ import { motion } from "motion/react"
 import IllustFrame from "./IllustFrame"
 import mihawk from "../assets/mihawk.jpg"
 import raiden from "../assets/raiden.png"
+import { ChevronRight } from "lucide-react"
 
-function Illustration() {
+type IllustrationProps = {
+    onViewChange: (view: "home" | "illust") => void;
+}
+
+function Illustration({ onViewChange }: IllustrationProps) {
     const illusts = [
         { 
             title: "Mihawk",
@@ -48,6 +53,11 @@ function Illustration() {
                             </IllustFrame>
                         </motion.div>
                     ))}
+                </div>
+                <div className="w-full text-right mt-8">
+                    <button onClick={() => onViewChange("illust")} className="inline-flex text-yellow-500 font-bold uppercase tracking-tighter text-sm items-center hover:translate-x-1 transition-transform">
+                        View All <ChevronRight size={16} />
+                    </button>
                 </div>
             </div>
         </section>

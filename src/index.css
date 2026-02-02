@@ -64,7 +64,7 @@ h1 {
 }
 
 ::-webkit-scrollbar {
-          width: 8px;
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
   background: #020617;

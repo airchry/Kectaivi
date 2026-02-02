@@ -9,7 +9,7 @@ function About() {
                     initial={{ x: -20, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter mb-8 flex items-center gap-4">
-                    Character Select
+                    About Me
                 </motion.h1>
 
                 <div className="items-start">

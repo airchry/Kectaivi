@@ -7,6 +7,7 @@ import Illustration from './components/Illustration'
 import Footer from './components/Footer'
 import { useState } from "react"
 import IllustPage from './pages/IllustPage'
+import Contact from './components/Contact'
 
 function App() {
   const [currentView, setCurrentView] = useState<"home" | "illust">("home")
@@ -19,7 +20,8 @@ function App() {
           <Header/>
           <About/>
           <Weapon/>
-          <Illustration/>
+          <Illustration onViewChange={setCurrentView}/>
+          <Contact/>
       </div>
       ) : <IllustPage/>}
       <Footer/>
